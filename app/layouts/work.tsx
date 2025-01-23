@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function work() {
+export default function Work() {
   return (
-    <div>work</div>
+    <section>work</section>
   )
 }

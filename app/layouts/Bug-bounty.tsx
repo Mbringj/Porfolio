@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Bug-bounty() {
+export default function BugBounty() {
   return (
     <div>Bug-bounty</div>
   )
