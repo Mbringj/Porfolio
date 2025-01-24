@@ -8,11 +8,15 @@ import Education from "@/app/layouts/Education";
 import Certification from "@/app/layouts/Certification";
 import Contacts from "@/app/layouts/Contacts";
 import Footer from "@/app/layouts/Footer";
+import Navbar from "./components/Navbar";
 
 
 export default function Home() {
   return (
     <main>
+      <section className="mb-4">
+        <Navbar />
+      </section>
       <section>
         <Hero />
       </section>
