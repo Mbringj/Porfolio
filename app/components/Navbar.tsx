@@ -10,7 +10,6 @@ import { Moon, Sun } from "lucide-react";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
-  const [state, setState] = React.useState(false);
 
   const menus = {
     light: [
