@@ -4,20 +4,38 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <>
-      <div className="mx-auto w-full max-w-2xl space-y-8">
-        <div className="gap-2 flex flex-col justify-between">
-          <div className="flex-col flex flex-1 space-y-1.5">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Hi, I&apos;m Jeremie👋</h1>
-            <p className="max-w-[600px] md:text-xl">FullStack Web Code Developer and Security Engineer specializing in web application development and security. I am enthusiastic about developing software that helps people. Happy reading!🤠</p>
-            <span className="relative flex shrink-0 overflow-hidden rounded-full size-32 border">
-              <Image 
-                src={"/public/img/image.png"}
-                alt={'avatar img'}
-                width={100}
-                height={100}
-              />
-            </span>
-          </div>        
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[50vh] flex items-center justify-center">
+        <div className="mx-auto w-full max-w-4xl">
+          <div className="flex items-center justify-between gap-6">
+            {/* Texte du Hero */}
+            <div className="space-y-3">
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                Hi, I&apos;m Jeremie <span className="inline-block animate-waving-hand">👋</span>
+              </h1>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-[600px]">
+              Développeur Full Stack & Ingénieur en Sécurité des Applications
+              <br />
+                Je crée des applications web et mobiles performantes, intuitives et sécurisées. Mon objectif est de combiner innovation et sécurité pour offrir des solutions fiables adaptées à vos besoins.
+              <br />
+              Découvrez mon travail et collaborons pour donner vie à vos projets !
+              </p>
+            </div>
+
+            {/* Image du Hero */}
+            <div className="relative shrink-0">
+              <span className="relative flex overflow-hidden rounded-full w-28 h-28">
+                <Image
+                  src="/img/image.png"
+                  width={350}
+                  height={350}
+                  alt="Profile picture"
+                  className="object-cover"
+                  priority
+                />
+              </span>
+            </div>
+          </div>
+
         </div>
       </div>      
     </>
