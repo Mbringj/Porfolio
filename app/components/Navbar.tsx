@@ -9,17 +9,8 @@ import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
 export default function Navbar() {
-  const [mounted, setMounted] = React.useState(false);
   const { theme, setTheme } = useTheme();
   const [state, setState] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null; // ou un placeholder/skeleton
-  }
 
   const menus = {
     light: [
