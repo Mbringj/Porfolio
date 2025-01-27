@@ -1,6 +1,10 @@
+'use client'
+
+import * as React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
+import { randomUUID } from 'crypto';
 
 const projects =  [
   {
@@ -30,6 +34,16 @@ const projects =  [
 ]
 
 const Projects = () => {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <section id="projects" className="container mx-auto px-4 py-16">
       <h2 className="mb-8 text-3xl font-bold text-center">My Projects</h2>
@@ -53,9 +67,12 @@ const Projects = () => {
               <div className="flex flex-wrap gap-2">
                 {
                   project.stack.map((tech) => (
-                    <>
-                      <Button variant="outline" key={tech}>{tech}</Button>
-                    </>
+                    <Button 
+                      variant="outline" 
+                      key={tech}
+                    >
+                      {tech}
+                    </Button>
                   ))
                 }
               </div>
