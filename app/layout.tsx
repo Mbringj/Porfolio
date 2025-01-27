@@ -6,7 +6,6 @@ import {
   ThemeProvider
 } from "@/components/theme-provider";
 import Footer from '@/app/layouts/Footer';
-import dynamic from 'next/dynamic';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
