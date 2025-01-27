@@ -5,7 +5,8 @@ import  Navbar  from "@/app/components/Navbar";
 import {
   ThemeProvider
 } from "@/components/theme-provider";
-import Footer from '@/app/layouts/Footer'
+import Footer from '@/app/layouts/Footer';
+import dynamic from 'next/dynamic';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={`${geistSans.variable} ${geistMono.variable} 
         min-h-screen 
         bg-white dark:bg-gray-950 

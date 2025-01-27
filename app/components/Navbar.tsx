@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
+
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
@@ -102,8 +103,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="mx-auto w-full content-center flex justify-center items-center border-b md:border-0 bg-white dark:bg-gray-950 mt-2">
-      <div className="bg-gray-50 shadow-lg shadow-gray-15 inset-shadow-2xs w-1/2 rounded-full sm:w-1/3 dark:bg-gray-800 flex items-center justify-center mx-auto h-14">
+    <nav className="mx-auto w-full content-center flex justify-center items-center border-b md:border-0 bg-white dark:bg-gray-950 mt-2" suppressHydrationWarning>
+      <div className="bg-gray-50 shadow-lg shadow-gray-15 inset-shadow-2xs w-1/2 sm: w-full rounded-full sm:w-1/3 dark:bg-gray-800 flex items-center justify-center mx-auto h-14">
         { theme === "light" ? menus.light.map((menu) => (
           <div key={menu.title}>
             <TooltipProvider>
@@ -117,6 +118,7 @@ export default function Navbar() {
                       height={24}
                       className="m-2 hover:scale-110 transition-transform"
                       priority
+                      suppressHydrationWarning
                     />
                   </Link>
                 </TooltipTrigger>
@@ -140,6 +142,7 @@ export default function Navbar() {
                       height={24}
                       className="m-2 hover:scale-110 transition-transform"
                       priority
+                      suppressHydrationWarning
                     />
                   </Link>
                 </TooltipTrigger>
@@ -165,6 +168,7 @@ export default function Navbar() {
                       height={24}
                       className="m-2 hover:scale-110 transition-transform"
                       priority
+                      suppressHydrationWarning
                     />
                   </Link>
                 </TooltipTrigger>
@@ -188,6 +192,7 @@ export default function Navbar() {
                       height={24}
                       className="m-2 hover:scale-110 transition-transform"
                       priority
+                      suppressHydrationWarning
                     />
                   </Link>
                 </TooltipTrigger>
@@ -206,9 +211,9 @@ export default function Navbar() {
               <TooltipTrigger asChild>
                 <button onClick={toggleTheme}>
                   {theme === "light" ? (
-                    <Moon className="w-6 h-6 m-2 hover:scale-110 transition-transform" />
+                    <Moon className="w-6 h-6 m-2 hover:scale-110 transition-transform" suppressHydrationWarning={true}/>
                   ) : (
-                    <Sun className="w-6 h-6 m-2 hover:scale-110 transition-transform" />
+                    <Sun className="w-6 h-6 m-2 hover:scale-110 transition-transform" suppressHydrationWarning={true}/>
                   )}
                 </button>
               </TooltipTrigger>
