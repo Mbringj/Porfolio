@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
 
 const projects =  [
   {
     title: "E-commerce Platform",
     description: "A full-stack e-commerce solution with React, Node.js, and MongoDB.",
     image: "",
-    stack: ["React", "Node.js", "MongoDB"],
+    stack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Chart.js"],
     demoLink: "#",
     codeLink: "#",
   },
