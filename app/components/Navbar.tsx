@@ -93,11 +93,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="mx-auto w-full content-center flex justify-center items-center border-b md:border-0 bg-white dark:bg-gray-950 mt-2" suppressHydrationWarning>
-      <div className="bg-gray-50 shadow-lg shadow-gray-15 inset-shadow-2xs w-1/2 sm: w-full rounded-full sm:w-1/3 dark:bg-gray-800 flex items-center justify-center mx-auto h-14">
+    <nav className="mx-auto w-full content-center flex justify-center items-center border-b md:border-0 bg-white dark:bg-gray-950 mt-2">
+      <div className="bg-gray-50 shadow-lg shadow-gray-15 inset-shadow-2xs xl:w-1/2 w-full md:w-full sm:w-full rounded-full sm:w-1/3 dark:bg-gray-800 flex items-center justify-center mx-auto h-14">
         { theme === "light" ? menus.light.map((menu) => (
           <div key={menu.title}>
-            <TooltipProvider>
+            <TooltipProvider delayDuration={50}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link href={menu.path}>
@@ -121,7 +121,7 @@ export default function Navbar() {
         )):
         menus.dark.map((menu) => (
           <div key={menu.title}>
-            <TooltipProvider>
+            <TooltipProvider delayDuration={50}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link href={menu.path}>
@@ -145,9 +145,12 @@ export default function Navbar() {
         )) 
         }
         <Separator orientation="vertical" className="h-8 mx-4 bg-gray-300 dark:bg-gray-600" />
+
+        { /** le menu avec des tooltips pour indiquer le nom du menu*/}
+
         {theme === "light" ? socialLinks.light.map((social) => (
           <div key={social.title}>
-            <TooltipProvider>
+            <TooltipProvider delayDuration={50}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link href={social.path} target="_blank">
@@ -171,7 +174,8 @@ export default function Navbar() {
         )): 
         socialLinks.dark.map((social) => (
           <div key={social.title}>
-            <TooltipProvider>
+            {/** le menu avec des tooltips pour indiquer le nom du menu*/}
+            <TooltipProvider delayDuration={50}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link href={social.path} target="_blank">
@@ -196,7 +200,7 @@ export default function Navbar() {
         }
         <Separator orientation="vertical" className="h-8 mx-4 bg-gray-300 dark:bg-gray-600" />
         <div>
-          <TooltipProvider>
+          <TooltipProvider delayDuration={50}>
             <Tooltip>
               <TooltipTrigger asChild>
                 <button onClick={toggleTheme}>

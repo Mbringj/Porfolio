@@ -6,7 +6,7 @@ export default function Hero() {
     <>
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[50vh] flex items-center justify-center">
         <div className="mx-auto w-full max-w-4xl">
-          <div className="flex items-center justify-between gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6">
             {/* Texte du Hero */}
             <div className="space-y-3">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
