@@ -15,7 +15,7 @@ import { inter } from "@/app/font";
 // });
 
 export const metadata: Metadata = {
-  title: "Porfolio",
+  title: "Mbring Jeremy",
   description: "personnal porfolio for showcase projets",
 };
 
