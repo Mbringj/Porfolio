@@ -1,5 +1,4 @@
 import Hero from '@/app/layouts/Hero'
-import About from '@/app/layouts/About'
 import TechStack from './layouts/SkillAndStack'
 import Projets from '@/app/layouts/Projets'
 import Contacts from '@/app/layouts/Contacts'
@@ -11,7 +10,6 @@ export default function Home() {
     <main className="flex min-h-screen flex-col" suppressHydrationWarning={true}>
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <Hero />
-        <About />
         <Projets />
         <TechStack />
         <Experience />

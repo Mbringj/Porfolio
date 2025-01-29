@@ -93,8 +93,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="mx-auto w-full content-center flex justify-center items-center border-b md:border-0 bg-white dark:bg-gray-950 mt-2">
-      <div className="bg-gray-50 shadow-lg shadow-gray-15 inset-shadow-2xs xl:w-1/2 w-full md:w-full sm:w-full rounded-full sm:w-1/3 dark:bg-gray-800 flex items-center justify-center mx-auto h-14">
+
+      <nav className="bg-white border-5 md:mb-1 border-gray-100 border-2 xl:w-1/2 md:w-1/2 w-full  sm:w-full rounded-full  dark:bg-[#080808] sticky top-1  dark:border-[#242424] z-50 dark:border-2 flex items-center justify-center mx-auto h-14 mb-2">
         { theme === "light" ? menus.light.map((menu) => (
           <div key={menu.title}>
             <TooltipProvider delayDuration={50}>
@@ -217,7 +217,6 @@ export default function Navbar() {
             </Tooltip>
           </TooltipProvider>
         </div>
-      </div>
-    </nav>
+      </nav>
   );
 }

@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body className={`${inter.variable} ${inter.variable} 
         min-h-screen 
-        bg-white dark:bg-gray-950 
+        bg-white dark:bg-[#080808] 
         text-gray-900 dark:text-gray-100
         transition-all duration-300 ease-in-out
         antialiased`}
