@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import  Navbar  from "@/app/components/Navbar";
 import {
@@ -7,16 +6,8 @@ import {
 } from "@/components/theme-provider";
 import Footer from '@/app/layouts/Footer';
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+import { inter } from "@/app/font";
 
-const inter = Inter({
-  weight: '400',
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 // const geistMono = Geist_Mono({
 //   variable: "--font-geist-mono",
@@ -33,14 +24,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={`${inter.variable} ${inter.variable} 
+      <body className={`${inter.className} ${inter.className} 
         min-h-screen 
         bg-white dark:bg-[#080808] 
         text-gray-900 dark:text-gray-100
         transition-all duration-300 ease-in-out
-        antialiased`}
+        antialiased bg-gradient-to-r from-white via-blue-50 to-white dark:bg-gradient-to-r dark:from-black dark:via-[#002] dark:to-black`}
       >
         <ThemeProvider
           attribute="class"

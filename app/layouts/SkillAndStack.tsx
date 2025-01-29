@@ -3,42 +3,73 @@ import Image from 'next/image';
 
 const techCategories = [
   {
+    name: 'Languages',
+    techs: [
+      { name: 'Css', icon: 'css3', wordmark: false, wordmarkUrl: ''},
+      { name: 'Html', icon: 'html5', wordmark: false, wordmarkUrl: ''},
+      { name: 'TypeScript', icon: 'typescript', wordmark: false, wordmarkUrl: ''},
+      { name: 'Javascript', icon: 'javascript', wordmark: false, wordmarkUrl: ''},
+      { name: 'C', icon: 'c', wordmark: false, wordmarkUrl: ''},
+      { name: 'Python', icon: 'python', wordmark: false, wordmarkUrl: ''},
+      { name: 'Java', icon: 'java', wordmark: false, wordmarkUrl: ''},
+      
+    ],
+  },
+  {
     name: 'Frontend',
     techs: [
-      { name: 'React', icon: 'react', wordmark: false},
-      { name: 'Next.js', icon: 'nextjs', wordmark: false},
-      { name: 'TypeScript', icon: 'typescript', wordmark: false},
-      { name: 'Tailwind CSS', icon: 'tailwindcss', wordmark: false},
+      { name: 'React', icon: 'react', wordmark: false, wordmarkUrl: ''},
+      { name: 'Next.js', icon: 'nextjs', wordmark: false, wordmarkUrl: ''},
+      { name: 'TypeScript', icon: 'typescript', wordmark: false, wordmarkUrl: ''},
+      { name: 'Tailwind CSS', icon: 'tailwindcss', wordmark: false, wordmarkUrl: ''},
     ],
   },
   {
     name: 'Backend',
     techs: [
-      { name: 'Node.js', icon: 'nodejs', wordmark: false},
-      { name: 'Express', icon: 'express', wordmark: false},
-      { name: 'Nestjs', icon: 'nestjs', wordmark: false},
+      { name: 'Node.js', icon: 'nodejs', wordmark: false, wordmarkUrl: ''},
+      { name: 'Express', icon: 'express', wordmark: false, wordmarkUrl: ''},
+      { name: 'Nestjs', icon: 'nestjs', wordmark: false, wordmarkUrl: ''},
+      { name: 'Graphql', icon: 'graphql', wordmark: true, wordmarkUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg'},
     ],
   },
   {
     name: 'Database',
     techs: [
-      { name: 'MongoDB', icon: 'mongodb', wordmark: false},
-      { name: 'PostgreSQL', icon: 'postgresql', wordmark: false},
-      { name: 'MySQL', icon: 'mysql', wordmark: false},
-      { name: 'Redis', icon: 'redis', wordmark: false},
-      { name: 'Firebase', icon: 'firebase', wordmark: false},
-      { name: 'Supabase', icon: 'supabase', wordmark: false}
+      { name: 'MongoDB', icon: 'mongodb', wordmark: false, wordmarkUrl: ''},
+      { name: 'PostgreSQL', icon: 'postgresql', wordmark: false, wordmarkUrl: ''},
+      { name: 'MySQL', icon: 'mysql', wordmark: false, wordmarkUrl: ''},
+      { name: 'Redis', icon: 'redis', wordmark: false, wordmarkUrl: ''},
+      { name: 'Firebase', icon: 'firebase', wordmark: false, wordmarkUrl: ''},
+      { name: 'Supabase', icon: 'supabase', wordmark: false, wordmarkUrl: ''},
+      { name: 'Sqlite', icon: 'sqlite', wordmark: true, wordmarkUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg'},
+      
     ],
   },
   {
     name: 'DevOps & Tools',
     techs: [
-      { name: 'Docker', icon: 'docker', wordmark: false},
-      { name: 'Kubernetes', icon: 'kubernetes', wordmark: false},
+      { name: 'Docker', icon: 'docker', wordmark: false, wordmarkUrl: ''},
+      { name: 'Kubernetes', icon: 'kubernetes', wordmark: false, wordmarkUrl: ''},
       { name: 'Git', icon: 'git', wordmark: false},
-      { name: 'Jenkins', icon: 'jenkins', wordmark: false},
-      { name: 'Git Actions', icon: 'githubactions', wordmark: false},
-      { name: 'Amazone', icons: 'amazonwebservices', wordmark: true}
+      { name: 'Jenkins', icon: 'jenkins', wordmark: false, wordmarkUrl: ''},
+      { name: 'Git Actions', icon: 'githubactions', wordmark: false, wordmarkUrl: ''},
+      { name: 'Amazone', icons: 'amazonwebservices', wordmark: true, wordmarkUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg'},
+      { name: 'Digital Ocean', icons: 'digitalocean', wordmark: true, wordmarkUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/digitalocean/digitalocean-original.svg'},
+      { name: 'Azure', icons: 'azure', wordmark: true, wordmarkUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg'}
+    ],
+  },
+  {
+    name: 'IT Tools',
+    techs: [
+      { name: 'Linux', icon: 'linux', wordmark: false, wordmarkUrl: ''},
+      { name: 'Nginx', icon: 'nginx', wordmark: false, wordmarkUrl: ''},
+      { name: 'Prometheus', icon: 'prometheus', wordmark: false},
+      { name: 'Apache kafka', icon: 'apachekafka', wordmark: false, wordmarkUrl: ''},
+      { name: 'rabbitmq', icon: 'rabbitmq', wordmark: false, wordmarkUrl: ''},
+      { name: 'Ansible', icons: 'ansible', wordmark: true, wordmarkUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg'},
+      // { name: 'Digital Ocean', icons: 'digitalocean', wordmark: true, wordmarkUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/digitalocean/digitalocean-original.svg'},
+      // { name: 'Azure', icons: 'azure', wordmark: true, wordmarkUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg'}
     ],
   },
 ]
@@ -60,7 +91,7 @@ const TechStack = () => {
                     { 
                       tech.wordmark ? 
                       <Image
-                        src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg`}
+                        src={tech.wordmarkUrl || ''}
                         alt={tech.name}
                         className="w-12 h-12 mb-2"
                         width={30}

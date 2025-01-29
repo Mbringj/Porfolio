@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { inter } from "../font";
 
 function InpirationQuote() {
 
@@ -14,7 +16,7 @@ function InpirationQuote() {
         <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
             <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
                 <cite className="pe-3 font-medium text-gray-900 dark:text-white">Albert Einstein</cite>
-                <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">Physician</cite>
+                <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">Physian</cite>
             </div>
         </figcaption>
     </figure>
@@ -24,8 +26,8 @@ function InpirationQuote() {
 export default function Hero() {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[50vh] flex items-center justify-center content-center">
-        <div className="mx-auto w-full max-w-4xl mt-2">
+    <div className={`max-w-screen-xl mx-auto px-2 md:text-left text-center lg:px-8 min-h-[50vh] flex wrap items-center justify-center ${inter.className}`}>
+        <div className="mx-auto w-full max-w-4xl">
           <div className="flex flex-wrap items-center justify-center gap-6">
             {/* Texte du Hero */}
             <div className="space-y-3">
@@ -39,6 +41,10 @@ export default function Hero() {
               <br />
               Découvrez mon travail et collaborons pour donner vie à vos projets !
               </p>
+              <div className='flex justify-center md:justify-normal'>
+                <Button className='mr-2'>Mon Cv</Button>
+                <Button>Contact Me</Button>
+              </div>
             </div>
 
             {/* Image du Hero */}
@@ -55,9 +61,9 @@ export default function Hero() {
               </span>
             </div>
           </div>
-
         </div>
       </div>  
+      
       <InpirationQuote />    
     </>
   );

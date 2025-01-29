@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { inter } from "../font"
 
 const educations = [
   {
@@ -42,7 +43,7 @@ const certifications = [
 
 const EducationAndAchievements = () => {
   return (
-    <section id="education-and-achievements" className="container mx-auto px-4 py-16">
+    <section id="education-and-achievements" className={`container mx-auto px-4 py-16 ${inter.className}`}>
       <h2 className="mb-8 text-3xl font-bold text-center">Education & Achievements</h2>
 
       <div className="space-y-8">

@@ -9,6 +9,7 @@ import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 
 
+
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
@@ -94,7 +95,7 @@ export default function Navbar() {
 
   return (
 
-      <nav className="bg-white border-5 md:mb-1 border-gray-100 border-2 xl:w-1/2 md:w-1/2 sm:w-full rounded-full  dark:bg-[#080808] sticky top-1  dark:border-[#242424] z-50 dark:border-2 flex items-center justify-center mx-auto h-14">
+      <nav className="bg-white border-5 border-gray-100 border-2 xl:w-1/2 md:w-1/2 rounded-full  dark:bg-[#080808] sticky top-1  dark:border-[#242424] z-50 dark:border-2 flex items-center justify-center mx-auto h-14 mt-2 mb-4">
         { theme === "light" ? menus.light.map((menu) => (
           <div key={menu.title}>
             <TooltipProvider delayDuration={50}>
@@ -137,7 +138,7 @@ export default function Navbar() {
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>Mongo DB</p>
+                  <p>{menu.title}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
