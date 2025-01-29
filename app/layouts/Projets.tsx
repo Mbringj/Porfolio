@@ -44,7 +44,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="container mx-auto px-4 py-16">
-      <h2 className="mb-8 text-3xl font-bold text-center">My Projects</h2>
+      <h2 className="mb-8 text-3xl font-bold text-center">Featured Projects</h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Card key={project.title}>
