@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
+import AnimationContainer from '../utils';
 
 const techCategories = [
   {
@@ -76,7 +77,7 @@ const techCategories = [
 
 const TechStack = () => {
   return (
-    <section id="tech-stack" className="container mx-auto px-4 py-16">
+    <AnimationContainer customClassName="container mx-auto px-4 py-16" customDelay={0.3}>
       <h2 className="mb-8 text-4xl font-bold text-center tracking-tight font-geist">Skill and Technology</h2>
       <div className="grid gap-8 md:grid-cols-2">
         {techCategories.map((category) => (
@@ -114,7 +115,7 @@ const TechStack = () => {
           </Card>
         ))}
       </div>
-    </section>
+    </AnimationContainer>
   )
 }
 

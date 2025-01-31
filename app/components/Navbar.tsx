@@ -7,6 +7,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { Separator } from "@/components/ui/separator";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
+import AnimationContainer from "../utils";
 
 
 
@@ -94,130 +95,131 @@ export default function Navbar() {
   };
 
   return (
+    <AnimationContainer>
+        <nav className="bg-white border-5 opacity-75 border-gray-100 border-2 xl:w-1/2 md:min-w-72 rounded-full  dark:bg-[#080808] sticky top-1  dark:border-[#242424] z-50 dark:border-2 flex items-center justify-center mx-auto p-0 h-14 mt-2 mb-4">
+        { theme === "light" ? menus.light.map((menu) => (
+          <div key={menu.title}>
+            <TooltipProvider delayDuration={50}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link href={menu.path}>
+                    <Image 
+                      src={menu.iconUrl}
+                      alt={menu.title}
+                      width={24}
+                      height={24}
+                      className="m-2 hover:scale-110 transition-transform"
+                      priority
+                      suppressHydrationWarning
+                    />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{menu.title}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
+        )):
+        menus.dark.map((menu) => (
+          <div key={menu.title}>
+            <TooltipProvider delayDuration={50}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link href={menu.path}>
+                    <Image 
+                      src={menu.iconUrl}
+                      alt={menu.title}
+                      width={24}
+                      height={24}
+                      className="m-2 hover:scale-110 transition-transform"
+                      priority
+                      suppressHydrationWarning
+                    />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{menu.title}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
+        )) 
+        }
+        <Separator orientation="vertical" className="h-8 mx-4 bg-gray-300 dark:bg-gray-600" />
 
-    <nav className="bg-white border-5 opacity-75 border-gray-100 border-2 xl:w-1/2 md:min-w-72 rounded-full  dark:bg-[#080808] sticky top-1  dark:border-[#242424] z-50 dark:border-2 flex items-center justify-center mx-auto p-0 h-14 mt-2 mb-4">
-      { theme === "light" ? menus.light.map((menu) => (
-        <div key={menu.title}>
-          <TooltipProvider delayDuration={50}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link href={menu.path}>
-                  <Image 
-                    src={menu.iconUrl}
-                    alt={menu.title}
-                    width={24}
-                    height={24}
-                    className="m-2 hover:scale-110 transition-transform"
-                    priority
-                    suppressHydrationWarning
-                  />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{menu.title}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </div>
-      )):
-      menus.dark.map((menu) => (
-        <div key={menu.title}>
-          <TooltipProvider delayDuration={50}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link href={menu.path}>
-                  <Image 
-                    src={menu.iconUrl}
-                    alt={menu.title}
-                    width={24}
-                    height={24}
-                    className="m-2 hover:scale-110 transition-transform"
-                    priority
-                    suppressHydrationWarning
-                  />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{menu.title}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </div>
-      )) 
-      }
-      <Separator orientation="vertical" className="h-8 mx-4 bg-gray-300 dark:bg-gray-600" />
+        { /** le menu avec des tooltips pour indiquer le nom du menu*/}
 
-      { /** le menu avec des tooltips pour indiquer le nom du menu*/}
-
-      {theme === "light" ? socialLinks.light.map((social) => (
-        <div key={social.title}>
+        {theme === "light" ? socialLinks.light.map((social) => (
+          <div key={social.title}>
+            <TooltipProvider delayDuration={50}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link href={social.path} target="_blank">
+                    <Image 
+                      src={social.iconUrl}
+                      alt={social.title}
+                      width={24}
+                      height={24}
+                      className="m-2 hover:scale-110 transition-transform"
+                      priority
+                      suppressHydrationWarning
+                    />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{social.title}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
+        )): 
+        socialLinks.dark.map((social) => (
+          <div key={social.title}>
+            {/** le menu avec des tooltips pour indiquer le nom du menu*/}
+            <TooltipProvider delayDuration={50}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link href={social.path} target="_blank">
+                    <Image 
+                      src={social.iconUrl}
+                      alt={social.title}
+                      width={24}
+                      height={24}
+                      className="m-2 hover:scale-110 transition-transform"
+                      priority
+                      suppressHydrationWarning
+                    />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{social.title}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
+        ))
+        }
+        <Separator orientation="vertical" className="h-8 mx-4 bg-gray-300 dark:bg-gray-600" />
+        <div>
           <TooltipProvider delayDuration={50}>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link href={social.path} target="_blank">
-                  <Image 
-                    src={social.iconUrl}
-                    alt={social.title}
-                    width={24}
-                    height={24}
-                    className="m-2 hover:scale-110 transition-transform"
-                    priority
-                    suppressHydrationWarning
-                  />
-                </Link>
+                <button onClick={toggleTheme}>
+                  {theme === "light" ? (
+                    <Moon className="w-6 h-6 m-2 hover:scale-110 transition-transform" suppressHydrationWarning={true}/>
+                  ) : (
+                    <Sun className="w-6 h-6 m-2 hover:scale-110 transition-transform" suppressHydrationWarning={true}/>
+                  )}
+                </button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>{social.title}</p>
+                <p>{theme === "light" ? "Dark mode" : "Light mode"}</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </div>
-      )): 
-      socialLinks.dark.map((social) => (
-        <div key={social.title}>
-          {/** le menu avec des tooltips pour indiquer le nom du menu*/}
-          <TooltipProvider delayDuration={50}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link href={social.path} target="_blank">
-                  <Image 
-                    src={social.iconUrl}
-                    alt={social.title}
-                    width={24}
-                    height={24}
-                    className="m-2 hover:scale-110 transition-transform"
-                    priority
-                    suppressHydrationWarning
-                  />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{social.title}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </div>
-      ))
-      }
-      <Separator orientation="vertical" className="h-8 mx-4 bg-gray-300 dark:bg-gray-600" />
-      <div>
-        <TooltipProvider delayDuration={50}>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <button onClick={toggleTheme}>
-                {theme === "light" ? (
-                  <Moon className="w-6 h-6 m-2 hover:scale-110 transition-transform" suppressHydrationWarning={true}/>
-                ) : (
-                  <Sun className="w-6 h-6 m-2 hover:scale-110 transition-transform" suppressHydrationWarning={true}/>
-                )}
-              </button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>{theme === "light" ? "Dark mode" : "Light mode"}</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      </div>
-    </nav>
+      </nav>
+    </AnimationContainer>
   );
 }
