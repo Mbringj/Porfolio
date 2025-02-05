@@ -5,40 +5,17 @@ import AnimationContainer from "../utils"
 const educations = [
   {
     degree: "Bachelor of Science in Computer Science",
-    institution: "Tech University",
-    year: "2012 - 2016",
+    institution: "Ecole Nationale Superieure Polytechnique de Maroua ",
+    year: "2018 - 2022",
     description: "Focused on web technologies and software engineering. Graduated with honors.",
   },
 ]
 
 const hackathons = [
   {
-    name: "Global Code Jam 2022",
+    name: "PADGOF GIZ Jam 2024",
     position: "1st Place",
     description: "Developed an AI-powered accessibility tool for visually impaired users.",
-  },
-  {
-    name: "Hack for Good 2021",
-    position: "Runner-up",
-    description: "Created a platform connecting local food banks with donors to reduce food waste.",
-  },
-]
-
-const certifications = [
-  {
-    name: "AWS Certified Developer - Associate",
-    issuer: "Amazon Web Services",
-    year: "2023",
-  },
-  {
-    name: "Google Professional Cloud Developer",
-    issuer: "Google Cloud",
-    year: "2022",
-  },
-  {
-    name: "React Native Specialist",
-    issuer: "React Native Academy",
-    year: "2021",
   },
 ]
 
@@ -82,7 +59,7 @@ const EducationAndAchievements = () => {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-semibold mb-4">Certifications</h3>
             <div className="grid gap-4 md:grid-cols-3">
               {certifications.map((cert, index) => (
@@ -97,7 +74,7 @@ const EducationAndAchievements = () => {
                 </Card>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </AnimationContainer>

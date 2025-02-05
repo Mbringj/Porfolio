@@ -3,25 +3,11 @@ import AnimationContainer from "../utils";
 
 const experiences = [
   {
-    title: "Senior Web Developer",
-    company: "Tech Innovators Inc.",
-    period: "Jan 2021 - Present",
-    description:
-      "Lead developer for multiple high-profile web applications. Implemented modern front-end architectures using React and Next.js.",
-  },
-  {
-    title: "Full Stack Developer",
-    company: "Digital Solutions Ltd.",
-    period: "Mar 2018 - Dec 2020",
-    description:
-      "Developed and maintained various web applications using the MERN stack. Collaborated with cross-functional teams to deliver projects on time.",
-  },
-  {
     title: "Junior Web Developer",
-    company: "WebCraft Agency",
-    period: "Jun 2016 - Feb 2018",
+    company: "TIMER DIGITECH",
+    period: "Jun 2022 - Feb 2024",
     description:
-      "Assisted in the development of responsive websites for clients. Gained expertise in HTML, CSS, and JavaScript.",
+      "Développeur web full-stack spécialisé dans la création d'interfaces utilisateur conformes aux maquettes, le développement d'API RESTful et la mise en place de pipelines CI/CD. Expérience en déploiement et maintenance d'applications web. Projets réalisés : bots de marketing, applications e-learning (en cours), timerdigitech.com. Compétences : HTML, CSS, JavaScript, Node.js, MongoDB, MySQL, GitHub Actions.",
   },
 ];
 
