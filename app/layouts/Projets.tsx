@@ -27,7 +27,7 @@ const projects =  [
     description: "Friendly simple and intutive app for managing finance",
     image: "/img/Finantial.png",
     stack: ["React", "Next js", "Chart.js", "Node js"],
-    demoLink: "financial-app-psi.vercel.app",
+    demoLink: "https://financial-app-psi.vercel.app/",
     codeLink: "https://github.com/Mbringj/financial-app",
   },
 ]
