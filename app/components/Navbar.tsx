@@ -95,7 +95,7 @@ export default function Navbar() {
 
   return (
 
-    <nav className="bg-white border-5 opacity-75 border-gray-100 border-2 xl:w-1/2 md:min-w-72 rounded-full  dark:bg-[#080808] sticky top-1  dark:border-[#242424] z-50 dark:border-2 flex items-center justify-center mx-auto p-0 h-14 mt-2 mb-4">
+    <nav className="bg-white border-2 border-gray-100 dark:border-[1px] xl:w-1/2 md:min-w-72 rounded-full  dark:bg-[#080808] sticky top-1  dark:border-[#242424] z-50 flex items-center justify-center mx-auto md:p-0 h-14 mt-2 mb-4">
       { theme === "light" ? menus.light.map((menu) => (
         <div key={menu.title}>
           <TooltipProvider delayDuration={50}>

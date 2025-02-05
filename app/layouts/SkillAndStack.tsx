@@ -86,9 +86,9 @@ const TechStack = () => {
               <CardTitle className="text-xl font-geist">{category.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-4 gap-2">
                 {category.techs.map((tech) => (
-                  <div key={tech.name} className="flex flex-col items-center">
+                  <li key={tech.name} className="flex flex-col items-center">
                     { 
                       tech.wordmark ? 
                       <Image
@@ -107,7 +107,7 @@ const TechStack = () => {
                       />
                     }
                     <span className="text-sm text-center font-geist-mono">{tech.name}</span>
-                  </div>
+                  </li>
                 ))}
 
               </div>
