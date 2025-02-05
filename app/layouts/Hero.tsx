@@ -52,7 +52,7 @@ export default function Hero() {
               <div className="relative shrink-0">
                 <span className="relative flex overflow-hidden rounded-full w-28 h-28">
                   <Image
-                    src="/img/image.png"
+                    src="/img/profile.png"
                     width={350}
                     height={350}
                     alt="Profile picture"
